@@ -1,105 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yusuf Kozan | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'JetBrains Mono', monospace;
-      background-color: #0d1117;
-      color: #c9d1d9;
-      line-height: 1.6;
-      padding: 2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
     }
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #1a1a1a;
+      border-bottom: 1px solid #333;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    h1 {
-      font-size: 2.5rem;
-      color: #58a6ff;
+
+    nav h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #00eaff;
     }
-    section {
-      margin-bottom: 3rem;
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
     }
-    h2 {
-      color: #79c0ff;
-      border-bottom: 1px solid #30363d;
-      padding-bottom: 0.5rem;
-    }
-    a {
-      color: #8b949e;
+
+    .nav-links a {
       text-decoration: none;
+      color: #e0e0e0;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s;
     }
-    a:hover {
-      color: #58a6ff;
+
+    .nav-links a:hover {
+      background-color: #2b2b2b;
     }
-    .container {
-      max-width: 800px;
-      margin: auto;
+
+    section {
+      padding: 2rem;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #00eaff;
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <h1>Yusuf Kozan</h1>
-      <p>Electrical & Electronics Engineer | Autonomous Systems | SLAM | ROS</p>
-    </header>
+  <nav>
+    <h1>Yusuf Kozan</h1>
+    <div class="nav-links">
+      <a href="#" onclick="showSection('home')">Home</a>
+      <a href="#" onclick="showSection('about')">About</a>
+      <a href="#" onclick="showSection('skills')">Skills</a>
+      <a href="#" onclick="showSection('education')">Education</a>
+      <a href="#" onclick="showSection('experience')">Experience</a>
+      <a href="#" onclick="showSection('projects')">Projects</a>
+      <a href="#" onclick="showSection('achievements')">Achievements</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
+    </div>
+  </nav>
 
-    <section>
-      <h2>About Me</h2>
-      <p>I’m a recent Electrical and Electronics Engineering graduate passionate about autonomous systems, SLAM, and ROS. I enjoy building things from scratch, whether it's a robotic application, a control system simulation, or a game with a historical twist. I’m always exploring the intersection of hardware and intelligent software.</p>
-    </section>
+  <section id="home" class="active">
+    <h2>Welcome</h2>
+    <p>Hi, I'm Yusuf Kozan, an Electrical and Electronics Engineer passionate about autonomous systems, SLAM, and robotics. This is my personal portfolio where you can learn more about me and my work.</p>
+  </section>
 
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>Programming: C, C++, Python, MATLAB</li>
-        <li>Tools: Simulink, LTspice, PLECS, Altium Designer, Proteus, Android Studio</li>
-        <li>Technologies: ROS, SLAM, PID Control, Git, GitHub, Unity (Beginner)</li>
-        <li>Languages: Turkish (native), English (fluent)</li>
-      </ul>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Recent Electrical-Electronics Engineering graduate with hands-on experience in power electronics, SLAM, and robotic systems. I’ve completed a robotics internship in Porto and I’m currently working on multi-level SLAM with ROS and AI-powered systems.</p>
+  </section>
 
-    <section>
-      <h2>Education</h2>
-      <p><strong>Atatürk University</strong> — B.Sc. in Electrical and Electronics Engineering (2019 - 2024)</p>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>MATLAB, Simulink</li>
+      <li>LTspice, PLECS</li>
+      <li>Altium Designer, Proteus</li>
+      <li>ROS (Robot Operating System)</li>
+      <li>C/C++, Python</li>
+      <li>Android Studio</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>Work Experience</h2>
-      <p><strong>Robotics Internship — Porto, Portugal</strong><br>
-      Designed and developed robotic control systems as part of an Erasmus internship. Worked with ROS-based navigation and mapping.</p>
-    </section>
+  <section id="education">
+    <h2>Education</h2>
+    <p>B.Sc. in Electrical and Electronics Engineering</p>
+    <p>Participated in Erasmus+ program</p>
+  </section>
 
-    <section>
-      <h2>Big Projects</h2>
-      <ul>
-        <li><strong>Multi-Level Robot SLAM System:</strong> Developed a collaborative SLAM system with real-time AI master control.</li>
-        <li><strong>PID Control Lab Projects:</strong> Implemented closed-loop PID tuning, analyzed step responses in MATLAB/Simulink.</li>
-        <li><strong>Strategic 2D Multiplayer Game (In Development):</strong> Designed a historical game around virus vs. cure mechanics.</li>
-      </ul>
-    </section>
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <ul>
+      <li>Internship in Robotics – Porto, Portugal</li>
+      <li>Projects on autonomous systems, PID control, and embedded systems</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>Achievements & Certifications</h2>
-      <ul>
-        <li>Winner of multiple hackathons with the Erasmus+ Club</li>
-        <li>Certified in ROS Development and Control Systems</li>
-        <li>Speaker at Erasmus Experience Events</li>
-      </ul>
-    </section>
+  <section id="projects">
+    <h2>Big Projects</h2>
+    <ul>
+      <li>Autonomous Multi-Level SLAM Project with ROS and AI master control</li>
+      <li>Automatic Control Lab Projects – PMDC Motor Control, PID tuning</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:yusufkozann@gmail.com">yusufkozann@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yusufkozann">linkedin.com/in/yusufkozann</a></p>
-      <p>GitHub: <a href="https://github.com/yusufkozann">github.com/yusufkozann</a></p>
-    </section>
-  </div>
+  <section id="achievements">
+    <h2>Achievements and Certifications</h2>
+    <ul>
+      <li>Hackathon participations and awards</li>
+      <li>Erasmus+ Event Speaker</li>
+      <li>Various online certifications in robotics and embedded systems</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: yusuf@example.com</p>
+    <p>LinkedIn: linkedin.com/in/yusufkozan</p>
+    <p>GitHub: github.com/yusufkozann</p>
+  </section>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
+
 </html>
